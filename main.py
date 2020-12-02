@@ -60,10 +60,12 @@ class Graph:
             plt.plot(self.X, self.Y_fit)
             plt.xlabel("n")
             plt.ylabel("ln(S_n)")
+            plt.legend(["experimental", "fitted linier"])
             plt.title("A = " + "%.7f" % self.coeffs[0] + ", k = " + "%.7f" % self._k)
         elif self.gtype == Values.TIME:
             plt.xlabel("T_n_life")
             plt.ylabel("dN_n")
+            plt.legend(["experimental"])
             plt.title("T_life = " + "%.7f" % self.t_life + 
                       ", t_0 = " + "%.7f" % self.t_0 +
                       ", t_delta = " + "%.7f" % self.t_delta)
